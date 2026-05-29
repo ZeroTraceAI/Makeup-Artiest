@@ -41,7 +41,7 @@ const MAPS_EMBED_URL =
 
 export default function MapSection() {
   return (
-    <section className="relative w-full bg-white py-20 md:py-28 overflow-hidden">
+    <section id="location" className="relative w-full bg-white py-20 md:py-28 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#F9D5D3] rounded-full blur-3xl opacity-15 -translate-x-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#D4A373] rounded-full blur-3xl opacity-10 translate-x-1/3" />

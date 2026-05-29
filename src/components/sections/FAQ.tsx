@@ -86,7 +86,7 @@ export default function FAQ() {
   const isOpen = (itemId: string) => openItems.includes(itemId);
 
   return (
-    <section className="relative w-full bg-[#F8EDE3] py-20 md:py-28 overflow-hidden">
+    <section id="faq" className="relative w-full bg-[#F8EDE3] py-20 md:py-28 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 right-0 w-64 h-64 bg-[#D4A373] rounded-full blur-3xl opacity-10 translate-x-1/2" />
       <div className="absolute bottom-20 left-0 w-80 h-80 bg-[#F9D5D3] rounded-full blur-3xl opacity-20 -translate-x-1/3" />

@@ -24,16 +24,19 @@ const services = [
 
 const contactLinks = [
   {
+    id: 'phone',
     icon: Phone,
     label: '+91 99992 78874',
     href: 'tel:+919999278874',
   },
   {
+    id: 'whatsapp',
     icon: MessageCircle,
     label: '+91 99992 78874',
     href: 'https://wa.me/919999278874',
   },
   {
+    id: 'instagram',
     icon: Instagram,
     label: '@makeuptherapybymadhu',
     href: 'https://instagram.com/makeuptherapybymadhu',
@@ -168,7 +171,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               {contactLinks.map((item) => (
-                <li key={item.label}>
+                <li key={item.id}>
                   <a
                     href={item.href}
                     target={item.href.startsWith('http') ? '_blank' : undefined}
