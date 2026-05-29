@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Poppins, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import ThemeProvider from "@/components/shared/ThemeProvider";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -133,8 +134,10 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${poppins.variable} ${cormorant.variable} antialiased bg-background text-foreground`}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

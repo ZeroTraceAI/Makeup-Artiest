@@ -55,7 +55,7 @@ interface StatCardProps {
 function StatCard({ icon, value, suffix, label, index, inView }: StatCardProps) {
   return (
     <motion.div
-      className="group relative glass rounded-2xl p-6 sm:p-8 text-center hover:shadow-lg hover:shadow-[#D4A373]/10 transition-all duration-500 cursor-default"
+      className="group relative glass dark:bg-[#0F0F0F]/40 dark:border-[#3A3030]/30 rounded-2xl p-6 sm:p-8 text-center hover:shadow-lg hover:shadow-[#D4A373]/10 transition-all duration-500 cursor-default"
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{
@@ -74,12 +74,12 @@ function StatCard({ icon, value, suffix, label, index, inView }: StatCardProps) 
       </div>
 
       {/* Number */}
-      <div className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#2D2D2D]">
+      <div className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#2D2D2D] dark:text-[#F0E8E0]">
         <Counter target={value} suffix={suffix} inView={inView} />
       </div>
 
       {/* Label */}
-      <p className="mt-2 text-sm sm:text-base text-[#444444]/70 font-[family-name:var(--font-poppins)] font-light">
+      <p className="mt-2 text-sm sm:text-base text-[#444444]/70 dark:text-[#A09090] font-[family-name:var(--font-poppins)] font-light">
         {label}
       </p>
 
@@ -128,7 +128,7 @@ export default function Trust() {
     <section
       ref={sectionRef}
       id="trust"
-      className="relative py-20 sm:py-28 bg-[#F8EDE3]"
+      className="relative py-20 sm:py-28 bg-[#F8EDE3] dark:bg-[#1A1A1A]"
     >
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4A373]/30 to-transparent" />
@@ -153,10 +153,10 @@ export default function Trust() {
           <span className="inline-block text-sm font-[family-name:var(--font-cormorant)] text-[#D4A373] tracking-widest uppercase mb-3">
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#2D2D2D]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#2D2D2D] dark:text-[#F0E8E0]">
             Trusted by <span className="gradient-text">Hundreds</span>
           </h2>
-          <p className="mt-4 text-[#444444]/70 font-[family-name:var(--font-poppins)] font-light max-w-lg mx-auto">
+          <p className="mt-4 text-[#444444]/70 dark:text-[#A09090] font-[family-name:var(--font-poppins)] font-light max-w-lg mx-auto">
             Numbers speak louder than words. Here&apos;s why our clients love us.
           </p>
         </motion.div>

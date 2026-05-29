@@ -111,7 +111,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="relative w-full bg-white py-20 md:py-28 overflow-hidden">
+    <section id="pricing" className="relative w-full bg-white dark:bg-[#0F0F0F] py-20 md:py-28 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#F9D5D3] rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4A373] rounded-full blur-3xl opacity-10 translate-x-1/3 translate-y-1/3" />
@@ -134,10 +134,10 @@ export default function Pricing() {
           >
             Pricing
           </motion.span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-5">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] mb-5">
             Investment in Your Beauty
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Transparent pricing for all our premium services
           </p>
           <div className="section-divider mt-8 mx-auto w-32" />
@@ -161,10 +161,10 @@ export default function Pricing() {
                   ? '0 25px 60px rgba(212, 163, 115, 0.35)'
                   : '0 20px 50px rgba(212, 163, 115, 0.2)',
               }}
-              className={`relative group rounded-2xl bg-white transition-all duration-500 flex flex-col ${
+              className={`relative group rounded-2xl bg-white dark:bg-[#1A1A1A] transition-all duration-500 flex flex-col ${
                 pkg.popular
                   ? 'border-2 border-[#D4A373] shadow-xl shadow-[#D4A373]/15 lg:scale-105 lg:z-10'
-                  : 'border border-[#F0E6DC] shadow-md hover:border-[#D4A373]/50'
+                  : 'border border-[#F0E6DC] dark:border-[#3A3030] shadow-md hover:border-[#D4A373]/50'
               }`}
             >
               {/* Top gradient bar for popular card */}
@@ -185,7 +185,7 @@ export default function Pricing() {
               <div className="p-6 md:p-7 flex flex-col flex-1">
                 {/* Package Name */}
                 <h3
-                  className={`font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-semibold text-[#2D2D2D] text-center mb-2 ${
+                  className={`font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] text-center mb-2 ${
                     pkg.popular ? 'mt-3' : ''
                   }`}
                 >
@@ -210,7 +210,7 @@ export default function Pricing() {
                         className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
                           pkg.popular
                             ? 'bg-[#D4A373]/15'
-                            : 'bg-[#F9D5D3]/50'
+                            : 'bg-[#F9D5D3]/50 dark:bg-[#2A2222]/50'
                         }`}
                       >
                         <Check
@@ -220,7 +220,7 @@ export default function Pricing() {
                           strokeWidth={3}
                         />
                       </div>
-                      <span className="font-[family-name:var(--font-poppins)] text-sm text-[#444444] leading-snug">
+                      <span className="font-[family-name:var(--font-poppins)] text-sm text-[#444444] dark:text-[#A09090] leading-snug">
                         {feature.text}
                       </span>
                     </li>
@@ -233,7 +233,7 @@ export default function Pricing() {
                   className={`w-full font-[family-name:var(--font-poppins)] text-sm font-medium rounded-full py-5 transition-all duration-300 cursor-pointer ${
                     pkg.popular
                       ? 'bg-[#D4A373] hover:bg-[#c4935f] text-white shadow-lg shadow-[#D4A373]/30'
-                      : 'bg-white border-2 border-[#D4A373] text-[#D4A373] hover:bg-[#D4A373] hover:text-white shadow-md'
+                      : 'bg-white dark:bg-[#0F0F0F] border-2 border-[#D4A373] text-[#D4A373] hover:bg-[#D4A373] hover:text-white shadow-md'
                   }`}
                   size="lg"
                 >
@@ -247,7 +247,7 @@ export default function Pricing() {
 
         {/* Note */}
         <motion.p
-          className="text-center mt-12 font-[family-name:var(--font-poppins)] text-sm text-[#444444]/70 italic"
+          className="text-center mt-12 font-[family-name:var(--font-poppins)] text-sm text-[#444444]/70 dark:text-[#A09090]/70 italic"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -36,10 +36,10 @@ export default function FloatingWhatsApp() {
               initial={{ opacity: 0, x: 10, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 10, scale: 0.8 }}
-              className="absolute bottom-full right-0 mb-3 whitespace-nowrap bg-white text-[#2D2D2D] text-sm font-[family-name:var(--font-poppins)] px-4 py-2 rounded-xl shadow-lg shadow-black/10 border border-[#F0E6DC]"
+              className="absolute bottom-full right-0 mb-3 whitespace-nowrap bg-white dark:bg-[#1A1A1A] text-[#2D2D2D] dark:text-[#E8E0D8] text-sm font-[family-name:var(--font-poppins)] px-4 py-2 rounded-xl shadow-lg shadow-black/10 border border-[#F0E6DC] dark:border-[#3A3030]"
             >
               Chat on WhatsApp
-              <div className="absolute top-full right-5 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
+              <div className="absolute top-full right-5 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white dark:border-t-[#1A1A1A]" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -49,7 +49,7 @@ export default function FloatingWhatsApp() {
             <motion.button
               onClick={handleClick}
               aria-label="Chat on WhatsApp"
-              className="relative w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg shadow-[#25D366]/30 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366]/50 focus:ring-offset-2 focus:ring-offset-white"
+              className="relative w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg shadow-[#25D366]/30 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366]/50 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0F0F0F]"
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{

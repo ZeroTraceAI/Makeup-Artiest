@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, Home, User, Sparkles, Camera, Tag, Star, Phone, MessageCircle } from 'lucide-react';
+import ThemeToggle from '@/components/shared/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -128,8 +129,8 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(212,163,115,0.12)]'
-            : 'bg-white/60 backdrop-blur-sm'
+            ? 'bg-white/95 dark:bg-[#0F0F0F]/95 backdrop-blur-md shadow-[0_2px_20px_rgba(212,163,115,0.12)]'
+            : 'bg-white/60 dark:bg-[#0F0F0F]/60 backdrop-blur-sm'
         }`}
       >
         <nav
@@ -149,7 +150,7 @@ export default function Navbar() {
               ◆
             </span>
             <span
-              className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl font-semibold tracking-wide text-[#2D2D2D] transition-colors duration-300"
+              className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl font-semibold tracking-wide text-[#2D2D2D] dark:text-[#F0E8E0] transition-colors duration-300"
             >
               Makeup Therapy
               <span
@@ -172,7 +173,7 @@ export default function Navbar() {
                     className={`relative font-[family-name:var(--font-poppins)] text-[13px] font-medium tracking-wide uppercase px-3 py-2 transition-colors duration-300 group ${
                       isActive
                         ? 'text-[#D4A373]'
-                        : 'text-[#444444] hover:text-[#D4A373]'
+                        : 'text-[#444444] dark:text-[#A09090] hover:text-[#D4A373]'
                     }`}
                   >
                     {link.label}
@@ -189,7 +190,8 @@ export default function Navbar() {
           </ul>
 
           {/* ---- Desktop CTA ---- */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-2">
+            <ThemeToggle />
             <a href="#booking" onClick={(e) => handleNavClick(e, '#booking')}>
               <Button
                 className="font-[family-name:var(--font-poppins)] text-xs font-semibold tracking-wider uppercase bg-[#D4A373] hover:bg-[#c4935f] text-white rounded-sm px-6 h-10 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
@@ -202,7 +204,7 @@ export default function Navbar() {
           {/* ---- Mobile Hamburger ---- */}
           <button
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden p-2 rounded-md transition-colors duration-300 cursor-pointer text-[#2D2D2D] hover:text-[#D4A373]"
+            className="lg:hidden p-2 rounded-md transition-colors duration-300 cursor-pointer text-[#2D2D2D] dark:text-[#E8E0D8] hover:text-[#D4A373]"
             aria-label="Open navigation menu"
           >
             <Menu className="size-6" />
@@ -214,15 +216,15 @@ export default function Navbar() {
       <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
         <SheetContent
           side="right"
-          className="w-[300px] sm:w-[340px] bg-white border-l-[#F0E6DC] p-0 flex flex-col"
+          className="w-[300px] sm:w-[340px] bg-white dark:bg-[#0F0F0F] border-l-[#F0E6DC] dark:border-l-[#3A3030] p-0 flex flex-col"
         >
           {/* Header with brand */}
-          <SheetHeader className="p-6 pb-4 border-b border-[#F0E6DC]">
+          <SheetHeader className="p-6 pb-4 border-b border-[#F0E6DC] dark:border-[#3A3030]">
             <SheetTitle className="flex items-center gap-2">
               <span className="text-[#D4A373] text-lg" aria-hidden="true">
                 ◆
               </span>
-              <span className="font-[family-name:var(--font-playfair)] text-[#2D2D2D] text-lg font-semibold">
+              <span className="font-[family-name:var(--font-playfair)] text-[#2D2D2D] dark:text-[#F0E8E0] text-lg font-semibold">
                 Makeup Therapy
                 <span className="block text-xs tracking-[0.25em] uppercase font-[family-name:var(--font-cormorant)] font-medium text-[#D4A373] -mt-0.5">
                   by Madhu
@@ -249,8 +251,8 @@ export default function Navbar() {
                         onClick={(e) => handleNavClick(e, link.href)}
                         className={`flex items-center gap-3 px-4 py-3 rounded-md font-[family-name:var(--font-poppins)] text-sm font-medium tracking-wide transition-all duration-200 ${
                           isActive
-                            ? 'bg-[#F8EDE3] text-[#D4A373]'
-                            : 'text-[#444444] hover:bg-[#F8EDE3]/60 hover:text-[#D4A373]'
+                            ? 'bg-[#F8EDE3] dark:bg-[#2A2222] text-[#D4A373]'
+                            : 'text-[#444444] dark:text-[#A09090] hover:bg-[#F8EDE3]/60 dark:hover:bg-[#242424] hover:text-[#D4A373]'
                         }`}
                       >
                         <span
@@ -273,7 +275,11 @@ export default function Navbar() {
           </div>
 
           {/* Bottom CTA area */}
-          <div className="p-4 pt-2 border-t border-[#F0E6DC] space-y-3">
+          <div className="p-4 pt-2 border-t border-[#F0E6DC] dark:border-[#3A3030] space-y-3">
+            {/* Theme toggle */}
+            <div className="flex justify-center">
+              <ThemeToggle />
+            </div>
             {/* Book Now button */}
             <a
               href="#booking"

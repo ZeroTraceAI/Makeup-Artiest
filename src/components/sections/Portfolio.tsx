@@ -146,7 +146,7 @@ export default function Portfolio() {
   }
 
   return (
-    <section id="portfolio" className="bg-white py-20 md:py-28">
+    <section id="portfolio" className="bg-white dark:bg-[#0F0F0F] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -159,10 +159,10 @@ export default function Portfolio() {
           <span className="font-[family-name:var(--font-cormorant)] text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A373]">
             Portfolio
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] sm:text-4xl md:text-5xl">
+          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl md:text-5xl">
             Our Work Speaks For Itself
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] md:text-lg">
+          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] dark:text-[#A09090] md:text-lg">
             Browse our collection of stunning transformations
           </p>
           <div className="section-divider mx-auto mt-6 w-24" />
@@ -184,7 +184,7 @@ export default function Portfolio() {
                 className={`font-[family-name:var(--font-poppins)] shrink-0 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 md:px-6 md:py-2.5 md:text-base ${
                   activeFilter === category
                     ? 'bg-[#D4A373] text-white shadow-lg shadow-[#D4A373]/30'
-                    : 'bg-[#F8EDE3] text-[#444444] hover:bg-[#F9D5D3] hover:text-[#2D2D2D]'
+                    : 'bg-[#F8EDE3] dark:bg-[#242424] text-[#444444] dark:text-[#A09090] hover:bg-[#F9D5D3] dark:hover:bg-[#2A2222] hover:text-[#2D2D2D]'
                 }`}
               >
                 {category}

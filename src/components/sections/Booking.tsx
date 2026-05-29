@@ -218,13 +218,13 @@ Please confirm availability.`;
   return (
     <section
       id="booking"
-      className="relative overflow-hidden bg-[#F8EDE3] py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#F8EDE3] dark:bg-[#1A1A1A] py-20 lg:py-28"
     >
       {/* Background decorative elements */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-32 top-20 size-72 rounded-full bg-[#F9D5D3]/30 blur-3xl" />
-        <div className="absolute -left-24 bottom-20 size-64 rounded-full bg-[#D4A373]/10 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 blur-3xl" />
+        <div className="absolute -right-32 top-20 size-72 rounded-full bg-[#F9D5D3]/30 dark:bg-[#F9D5D3]/10 blur-3xl" />
+        <div className="absolute -left-24 bottom-20 size-64 rounded-full bg-[#D4A373]/10 dark:bg-[#D4A373]/5 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 dark:bg-white/5 blur-3xl" />
       </div>
 
       <motion.div
@@ -238,14 +238,14 @@ Please confirm availability.`;
         <motion.div variants={itemVariants} className="mb-12 text-center">
           <Badge
             variant="outline"
-            className="mb-4 border-[#D4A373]/30 bg-white/60 px-4 py-1.5 text-[#D4A373] font-[family-name:var(--font-poppins)] text-xs font-medium uppercase tracking-widest backdrop-blur-sm"
+            className="mb-4 border-[#D4A373]/30 bg-white/60 dark:bg-[#1A1A1A]/60 px-4 py-1.5 text-[#D4A373] font-[family-name:var(--font-poppins)] text-xs font-medium uppercase tracking-widest backdrop-blur-sm"
           >
             Book Now
           </Badge>
-          <h2 className="mb-3 text-3xl font-bold text-[#2D2D2D] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="mb-3 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
             Book Your Appointment
           </h2>
-          <p className="mx-auto max-w-lg text-base text-[#666666] font-[family-name:var(--font-poppins)]">
+          <p className="mx-auto max-w-lg text-base text-[#666666] dark:text-[#A09090] font-[family-name:var(--font-poppins)]">
             Let&apos;s create your perfect look together
           </p>
           <div className="section-divider mx-auto mt-6 max-w-48" />
@@ -256,7 +256,7 @@ Please confirm availability.`;
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="relative rounded-3xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-xl sm:p-8 lg:p-10"
+            className="relative rounded-3xl border border-white/40 dark:border-[#3A3030]/40 bg-white/70 dark:bg-[#0F0F0F]/70 p-6 shadow-xl backdrop-blur-xl sm:p-8 lg:p-10"
           >
             {/* Decorative sparkle */}
             <div className="absolute -right-3 -top-3 flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-[#D4A373] to-[#F9D5D3] shadow-lg">
@@ -271,7 +271,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="name"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Name <span className="text-red-400">*</span>
                 </Label>
@@ -281,7 +281,7 @@ Please confirm availability.`;
                   placeholder="Your full name"
                   value={formData.name}
                   onChange={(e) => updateField('name', e.target.value)}
-                  className={`h-11 rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
+                  className={`h-11 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] dark:placeholder:text-[#666666] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
                     errors.name ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/20' : ''
                   }`}
                 />
@@ -294,7 +294,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="phone"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Phone <span className="text-red-400">*</span>
                 </Label>
@@ -304,7 +304,7 @@ Please confirm availability.`;
                   placeholder="+91 99999 99999"
                   value={formData.phone}
                   onChange={(e) => updateField('phone', e.target.value)}
-                  className={`h-11 rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
+                  className={`h-11 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] dark:placeholder:text-[#666666] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
                     errors.phone ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/20' : ''
                   }`}
                 />
@@ -317,7 +317,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="email"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Email
                 </Label>
@@ -327,7 +327,7 @@ Please confirm availability.`;
                   placeholder="your@email.com"
                   value={formData.email}
                   onChange={(e) => updateField('email', e.target.value)}
-                  className={`h-11 rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
+                  className={`h-11 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] dark:placeholder:text-[#666666] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
                     errors.email ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/20' : ''
                   }`}
                 />
@@ -340,7 +340,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="service"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Service <span className="text-red-400">*</span>
                 </Label>
@@ -349,7 +349,7 @@ Please confirm availability.`;
                   onValueChange={(value) => updateField('service', value)}
                 >
                   <SelectTrigger
-                    className={`h-11 w-full rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
+                    className={`h-11 w-full rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
                       errors.service ? 'border-red-400' : ''
                     }`}
                   >
@@ -372,7 +372,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="eventType"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Event Type <span className="text-red-400">*</span>
                 </Label>
@@ -381,7 +381,7 @@ Please confirm availability.`;
                   onValueChange={(value) => updateField('eventType', value)}
                 >
                   <SelectTrigger
-                    className={`h-11 w-full rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
+                    className={`h-11 w-full rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
                       errors.eventType ? 'border-red-400' : ''
                     }`}
                   >
@@ -404,7 +404,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="eventDate"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Event Date <span className="text-red-400">*</span>
                 </Label>
@@ -415,7 +415,7 @@ Please confirm availability.`;
                     min={today}
                     value={formData.eventDate}
                     onChange={(e) => updateField('eventDate', e.target.value)}
-                    className={`h-11 rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
+                    className={`h-11 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20 ${
                       errors.eventDate ? 'border-red-400 focus-visible:border-red-400 focus-visible:ring-red-400/20' : ''
                     }`}
                   />
@@ -430,7 +430,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="preferredTime"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Preferred Time <span className="text-red-400">*</span>
                 </Label>
@@ -440,7 +440,7 @@ Please confirm availability.`;
                     onValueChange={(value) => updateField('preferredTime', value)}
                   >
                     <SelectTrigger
-                      className={`h-11 w-full rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
+                      className={`h-11 w-full rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
                         errors.preferredTime ? 'border-red-400' : ''
                       }`}
                     >
@@ -465,7 +465,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2">
                 <Label
                   htmlFor="location"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Location <span className="text-red-400">*</span>
                 </Label>
@@ -475,7 +475,7 @@ Please confirm availability.`;
                     onValueChange={(value) => updateField('location', value)}
                   >
                     <SelectTrigger
-                      className={`h-11 w-full rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
+                      className={`h-11 w-full rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] focus:ring-[#D4A373]/20 ${
                         errors.location ? 'border-red-400' : ''
                       }`}
                     >
@@ -500,7 +500,7 @@ Please confirm availability.`;
               <motion.div variants={formFieldVariants} className="space-y-2 sm:col-span-2">
                 <Label
                   htmlFor="specialNotes"
-                  className="text-[#2D2D2D] font-[family-name:var(--font-poppins)] text-sm font-medium"
+                  className="text-[#2D2D2D] dark:text-[#E8E0D8] font-[family-name:var(--font-poppins)] text-sm font-medium"
                 >
                   Special Notes
                 </Label>
@@ -510,7 +510,7 @@ Please confirm availability.`;
                   value={formData.specialNotes}
                   onChange={(e) => updateField('specialNotes', e.target.value)}
                   rows={3}
-                  className="min-h-[80px] rounded-xl border-[#F0E6DC] bg-white/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20"
+                  className="min-h-[80px] rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-white/80 dark:bg-[#1A1A1A]/80 font-[family-name:var(--font-poppins)] placeholder:text-[#aaaaaa] dark:placeholder:text-[#666666] focus-visible:border-[#D4A373] focus-visible:ring-[#D4A373]/20"
                 />
               </motion.div>
             </motion.div>
@@ -556,7 +556,7 @@ Please confirm availability.`;
                   </span>
                 )}
               </Button>
-              <p className="text-center text-xs text-[#888888] font-[family-name:var(--font-poppins)]">
+              <p className="text-center text-xs text-[#888888] dark:text-[#666666] font-[family-name:var(--font-poppins)]">
                 You&apos;ll be redirected to WhatsApp to confirm your appointment
               </p>
             </motion.div>

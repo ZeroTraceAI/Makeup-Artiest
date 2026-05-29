@@ -34,7 +34,7 @@ export default function ScrollToTop() {
         <motion.button
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-[#D4A373]/40 text-[#D4A373] flex items-center justify-center shadow-lg shadow-[#D4A373]/15 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4A373]/40 focus:ring-offset-2 focus:ring-offset-white hover:bg-[#D4A373]/10 hover:border-[#D4A373]/60 hover:text-[#C08B5C] font-[family-name:var(--font-poppins)]"
+          className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-12 h-12 rounded-full bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-md border border-[#D4A373]/40 text-[#D4A373] flex items-center justify-center shadow-lg shadow-[#D4A373]/15 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4A373]/40 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0F0F0F] hover:bg-[#D4A373]/10 hover:border-[#D4A373]/60 hover:text-[#C08B5C] font-[family-name:var(--font-poppins)]"
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 10 }}

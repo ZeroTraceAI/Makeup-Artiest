@@ -149,7 +149,7 @@ export default function InstagramFeed() {
   return (
     <section
       id="instagram"
-      className="relative overflow-hidden bg-white py-20 lg:py-28"
+      className="relative overflow-hidden bg-white dark:bg-[#0F0F0F] py-20 lg:py-28"
     >
       {/* Subtle background decoration */}
       <div className="pointer-events-none absolute inset-0">
@@ -168,14 +168,14 @@ export default function InstagramFeed() {
         <motion.div variants={itemVariants} className="mb-14 text-center">
           <Badge
             variant="outline"
-            className="mb-4 border-[#D4A373]/30 bg-[#F9D5D3]/20 px-4 py-1.5 text-[#D4A373] font-[family-name:var(--font-poppins)] text-xs font-medium uppercase tracking-widest"
+            className="mb-4 border-[#D4A373]/30 bg-[#F9D5D3]/20 dark:bg-[#2A2222]/20 px-4 py-1.5 text-[#D4A373] font-[family-name:var(--font-poppins)] text-xs font-medium uppercase tracking-widest"
           >
             Follow Us
           </Badge>
-          <h2 className="mb-3 text-3xl font-bold text-[#2D2D2D] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="mb-3 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
             Stay Connected on Instagram
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-[#666666] font-[family-name:var(--font-poppins)] text-base leading-relaxed">
+          <p className="mx-auto mt-4 max-w-lg text-[#666666] dark:text-[#A09090] font-[family-name:var(--font-poppins)] text-base leading-relaxed">
             Follow our journey for daily beauty inspiration, behind-the-scenes looks, and the latest makeup trends
           </p>
 
@@ -185,7 +185,7 @@ export default function InstagramFeed() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/ig inline-flex items-center gap-2 rounded-full border border-[#D4A373]/30 bg-[#F8EDE3]/50 px-5 py-2.5 transition-all duration-300 hover:border-[#D4A373] hover:bg-[#F8EDE3]"
+              className="group/ig inline-flex items-center gap-2 rounded-full border border-[#D4A373]/30 bg-[#F8EDE3]/50 dark:bg-[#242424]/50 px-5 py-2.5 transition-all duration-300 hover:border-[#D4A373] hover:bg-[#F8EDE3] dark:hover:bg-[#242424]"
             >
               <Instagram className="size-5 text-[#D4A373] transition-transform duration-300 group-hover/ig:scale-110" />
               <span className="text-sm font-medium text-[#D4A373] font-[family-name:var(--font-poppins)]">
@@ -231,7 +231,7 @@ export default function InstagramFeed() {
           </Button>
 
           {/* Subtle follower count hint */}
-          <p className="mt-4 text-sm text-[#999999] font-[family-name:var(--font-cormorant)] italic text-lg">
+          <p className="mt-4 text-sm text-[#999999] dark:text-[#666666] font-[family-name:var(--font-cormorant)] italic text-lg">
             Join our growing community of beauty enthusiasts
           </p>
         </motion.div>

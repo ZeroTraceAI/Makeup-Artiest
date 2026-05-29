@@ -36,7 +36,7 @@ const transformations = [
 
 export default function BeforeAfter() {
   return (
-    <section id="transformations" className="bg-white py-20 md:py-28">
+    <section id="transformations" className="bg-white dark:bg-[#0F0F0F] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -49,10 +49,10 @@ export default function BeforeAfter() {
           <span className="font-[family-name:var(--font-cormorant)] text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A373]">
             Transformations
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] sm:text-4xl md:text-5xl">
+          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl md:text-5xl">
             Before &amp; After
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] md:text-lg">
+          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] dark:text-[#A09090] md:text-lg">
             Slide to reveal the stunning transformations we create for our clients
           </p>
           <div className="section-divider mx-auto mt-6 w-24" />
@@ -88,7 +88,7 @@ export default function BeforeAfter() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="font-[family-name:var(--font-poppins)] mt-10 text-center text-sm text-[#888888] md:mt-12"
+          className="font-[family-name:var(--font-poppins)] mt-10 text-center text-sm text-[#888888] dark:text-[#666666] md:mt-12"
         >
           Drag the slider to see the transformation ✨
         </motion.p>

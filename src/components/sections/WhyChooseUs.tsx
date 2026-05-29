@@ -82,7 +82,7 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="bg-[#F8EDE3] py-20 md:py-28">
+    <section id="why-choose-us" className="bg-[#F8EDE3] dark:bg-[#1A1A1A] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -95,10 +95,10 @@ export default function WhyChooseUs() {
           <span className="font-[family-name:var(--font-cormorant)] text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A373]">
             Why Choose Us
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] sm:text-4xl md:text-5xl">
+          <h2 className="font-[family-name:var(--font-playfair)] mt-3 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl md:text-5xl">
             The Makeup Therapy Difference
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] md:text-lg">
+          <p className="font-[family-name:var(--font-poppins)] mx-auto mt-4 max-w-2xl text-base text-[#444444] dark:text-[#A09090] md:text-lg">
             What sets us apart from the rest
           </p>
           <div className="section-divider mx-auto mt-6 w-24" />
@@ -120,25 +120,25 @@ export default function WhyChooseUs() {
                 key={benefit.id}
                 variants={cardVariants}
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-l-4 hover:border-l-[#D4A373] md:p-8"
+                className="group relative overflow-hidden rounded-xl bg-white dark:bg-[#0F0F0F] p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-l-4 hover:border-l-[#D4A373] md:p-8"
               >
                 {/* Decorative corner accent */}
-                <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-[#F9D5D3]/30 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#F9D5D3]/50" />
+                <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-[#F9D5D3]/30 dark:bg-[#2A2222]/50 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#F9D5D3]/50" />
 
                 {/* Icon */}
                 <div className="relative mb-5 inline-flex">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#D4A373]/30 bg-[#F8EDE3] transition-all duration-300 group-hover:border-[#D4A373] group-hover:bg-[#D4A373]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#D4A373]/30 dark:border-[#3A3030] bg-[#F8EDE3] dark:bg-[#242424] transition-all duration-300 group-hover:border-[#D4A373] group-hover:bg-[#D4A373]">
                     <Icon className="h-6 w-6 text-[#D4A373] transition-colors duration-300 group-hover:text-white" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-[family-name:var(--font-playfair)] mb-2 text-xl font-bold text-[#2D2D2D]">
+                <h3 className="font-[family-name:var(--font-playfair)] mb-2 text-xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0]">
                   {benefit.title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-[family-name:var(--font-poppins)] line-clamp-2 text-sm leading-relaxed text-[#444444]/80">
+                <p className="font-[family-name:var(--font-poppins)] line-clamp-2 text-sm leading-relaxed text-[#444444]/80 dark:text-[#A09090]/80">
                   {benefit.description}
                 </p>
 

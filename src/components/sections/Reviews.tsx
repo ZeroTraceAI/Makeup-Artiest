@@ -117,21 +117,21 @@ function ReviewCard({ review }: { review: Review }) {
     <motion.div
       whileHover={{ y: -4, boxShadow: '0 20px 40px rgba(212, 163, 115, 0.15)' }}
       transition={{ duration: 0.3 }}
-      className="h-full rounded-2xl border border-[#F0E6DC] bg-white p-6 shadow-md transition-colors"
+      className="h-full rounded-2xl border border-[#F0E6DC] dark:border-[#3A3030] bg-white dark:bg-[#1A1A1A] p-6 shadow-md transition-colors"
     >
       {/* Decorative quote icon */}
       <div className="mb-4 flex items-start justify-between">
         <Quote className="size-8 text-[#D4A373] opacity-40" />
         <Badge
           variant="secondary"
-          className="bg-[#F9D5D3]/40 text-[#D4A373] hover:bg-[#F9D5D3]/60 font-[family-name:var(--font-poppins)] text-xs"
+          className="bg-[#F9D5D3]/40 dark:bg-[#2A2222]/60 text-[#D4A373] hover:bg-[#F9D5D3]/60 font-[family-name:var(--font-poppins)] text-xs"
         >
           {review.service}
         </Badge>
       </div>
 
       {/* Review text */}
-      <p className="mb-5 text-[15px] leading-relaxed text-[#555555] italic font-[family-name:var(--font-cormorant)] text-lg">
+      <p className="mb-5 text-[15px] leading-relaxed text-[#555555] dark:text-[#A09090] italic font-[family-name:var(--font-cormorant)] text-lg">
         &ldquo;{review.text}&rdquo;
       </p>
 
@@ -148,10 +148,10 @@ function ReviewCard({ review }: { review: Review }) {
           </span>
         </div>
         <div>
-          <p className="text-sm font-semibold text-[#2D2D2D] font-[family-name:var(--font-poppins)]">
+          <p className="text-sm font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] font-[family-name:var(--font-poppins)]">
             {review.name}
           </p>
-          <p className="text-xs text-[#888888] font-[family-name:var(--font-poppins)]">
+          <p className="text-xs text-[#888888] dark:text-[#A09090] font-[family-name:var(--font-poppins)]">
             Verified Client
           </p>
         </div>
@@ -214,7 +214,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="relative overflow-hidden bg-white py-20 lg:py-28"
+      className="relative overflow-hidden bg-white dark:bg-[#0F0F0F] py-20 lg:py-28"
     >
       {/* Subtle background decoration */}
       <div className="pointer-events-none absolute inset-0">
@@ -237,21 +237,21 @@ export default function Reviews() {
           >
             Client Reviews
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold text-[#2D2D2D] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
+          <h2 className="mb-4 text-3xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-4xl lg:text-5xl font-[family-name:var(--font-playfair)]">
             What Our Clients Say
           </h2>
           <div className="mx-auto mt-4 flex items-center justify-center gap-3">
             <div className="flex items-center gap-1">
               <Star className="size-5 fill-[#D4A373] text-[#D4A373]" />
-              <span className="text-lg font-bold text-[#2D2D2D] font-[family-name:var(--font-poppins)]">
+              <span className="text-lg font-bold text-[#2D2D2D] dark:text-[#F0E8E0] font-[family-name:var(--font-poppins)]">
                 4.9
               </span>
-              <span className="text-sm text-[#888888] font-[family-name:var(--font-poppins)]">
+              <span className="text-sm text-[#888888] dark:text-[#A09090] font-[family-name:var(--font-poppins)]">
                 /5
               </span>
             </div>
             <div className="h-4 w-px bg-[#F0E6DC]" />
-            <span className="text-sm text-[#888888] font-[family-name:var(--font-poppins)]">
+            <span className="text-sm text-[#888888] dark:text-[#A09090] font-[family-name:var(--font-poppins)]">
               155+ Happy Clients
             </span>
           </div>
@@ -266,7 +266,7 @@ export default function Reviews() {
               onClick={scrollPrev}
               variant="outline"
               size="icon"
-              className="pointer-events-auto -left-2 size-10 rounded-full border-[#D4A373]/30 bg-white/90 shadow-lg backdrop-blur-sm hover:bg-[#D4A373] hover:text-white sm:-left-5"
+              className="pointer-events-auto -left-2 size-10 rounded-full border-[#D4A373]/30 bg-white/90 dark:bg-[#1A1A1A]/90 shadow-lg backdrop-blur-sm hover:bg-[#D4A373] hover:text-white sm:-left-5"
             >
               <ChevronLeft className="size-5" />
               <span className="sr-only">Previous</span>
@@ -277,7 +277,7 @@ export default function Reviews() {
               onClick={scrollNext}
               variant="outline"
               size="icon"
-              className="pointer-events-auto -right-2 size-10 rounded-full border-[#D4A373]/30 bg-white/90 shadow-lg backdrop-blur-sm hover:bg-[#D4A373] hover:text-white sm:-right-5"
+              className="pointer-events-auto -right-2 size-10 rounded-full border-[#D4A373]/30 bg-white/90 dark:bg-[#1A1A1A]/90 shadow-lg backdrop-blur-sm hover:bg-[#D4A373] hover:text-white sm:-right-5"
             >
               <ChevronRight className="size-5" />
               <span className="sr-only">Next</span>

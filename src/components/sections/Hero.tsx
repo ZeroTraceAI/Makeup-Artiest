@@ -141,8 +141,8 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover opacity-20"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F9D5D3]/70 via-[#F8EDE3]/85 to-[#D4A373]/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F9D5D3]/70 dark:from-[#1A1A1A]/70 via-[#F8EDE3]/85 dark:via-[#0F0F0F]/85 to-[#D4A373]/30 dark:to-[#1A1A1A]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/50 dark:from-[#0F0F0F]/50 via-transparent to-white/30 dark:to-[#0F0F0F]/30" />
       </motion.div>
 
       {/* ---------- Decorative glow orbs ---------- */}
@@ -176,7 +176,7 @@ export default function Hero() {
       >
         {/* Badge */}
         <motion.div variants={itemVariants}>
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-[#D4A373]/20 text-sm font-[family-name:var(--font-poppins)] text-[#444444] shadow-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-[#1A1A1A]/60 backdrop-blur-md border border-[#D4A373]/20 text-sm font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#E8E0D8] shadow-sm">
             <span className="text-[#D4A373]">✨</span>
             Professional Makeup Artist in Ahmedabad
           </span>
@@ -189,7 +189,7 @@ export default function Hero() {
         >
           <span className="gradient-text">Transforming Beauty</span>
           <br />
-          <span className="relative inline-block text-[#2D2D2D]">
+          <span className="relative inline-block text-[#2D2D2D] dark:text-[#F0E8E0]">
             Into Confidence
             <span className="hero-gradient-underline absolute left-0 -bottom-2 h-[3px] w-full rounded-full" />
           </span>
@@ -207,7 +207,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-base sm:text-lg md:text-xl text-[#444444]/80 max-w-2xl mx-auto font-[family-name:var(--font-poppins)] font-light leading-relaxed whitespace-nowrap"
+              className="text-base sm:text-lg md:text-xl text-[#444444]/80 dark:text-[#A09090]/80 max-w-2xl mx-auto font-[family-name:var(--font-poppins)] font-light leading-relaxed whitespace-nowrap"
             >
               {ROTATING_PHRASES[phraseIndex]}
               <span className="typewriter-cursor ml-0.5 inline-block align-middle" />
@@ -248,7 +248,7 @@ export default function Hero() {
         {/* Trust line */}
         <motion.div
           variants={itemVariants}
-          className="mt-8 flex items-center justify-center gap-2 text-sm text-[#444444]/70 font-[family-name:var(--font-poppins)]"
+          className="mt-8 flex items-center justify-center gap-2 text-sm text-[#444444]/70 dark:text-[#A09090]/70 font-[family-name:var(--font-poppins)]"
         >
           <span className="text-[#D4A373]">★</span>
           <span>4.9 Google Rating</span>

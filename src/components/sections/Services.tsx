@@ -145,7 +145,7 @@ export default function Services() {
       className="relative py-20 md:py-28 overflow-hidden"
     >
       {/* Background: Champagne with subtle pattern */}
-      <div className="absolute inset-0 bg-[#F8EDE3]" />
+      <div className="absolute inset-0 bg-[#F8EDE3] dark:bg-[#1A1A1A]" />
       {/* Subtle dot pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -171,10 +171,10 @@ export default function Services() {
           <span className="inline-block text-[#D4A373] text-xs font-[family-name:var(--font-poppins)] font-semibold uppercase tracking-[0.2em] mb-3">
             Our Services
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D2D2D] leading-tight mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] leading-tight mb-4">
             Premium Makeup Services
           </h2>
-          <p className="font-[family-name:var(--font-cormorant)] text-xl md:text-2xl italic text-[#444444] max-w-2xl mx-auto">
+          <p className="font-[family-name:var(--font-cormorant)] text-xl md:text-2xl italic text-[#444444] dark:text-[#A09090] max-w-2xl mx-auto">
             Transforming your beauty with expert artistry
           </p>
           {/* Decorative divider */}
@@ -204,7 +204,7 @@ export default function Services() {
               >
                 <div
                   className={`
-                    relative h-full p-5 md:p-6 rounded-xl bg-white border border-[#D4A373]/10
+                    relative h-full p-5 md:p-6 rounded-xl bg-white dark:bg-[#0F0F0F] border border-[#D4A373]/10 dark:border-[#3A3030]/30
                     transition-all duration-400 ease-out cursor-pointer overflow-hidden
                     ${isHovered ? '-translate-y-2 border-[#D4A373]/50 shadow-xl shadow-[#D4A373]/10' : 'shadow-sm shadow-[#D4A373]/5'}
                   `}
@@ -222,17 +222,17 @@ export default function Services() {
                   {/* Content */}
                   <div className="relative z-10 text-center">
                     {/* Icon */}
-                    <div className="mx-auto mb-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#F8EDE3] border border-[#D4A373]/15 flex items-center justify-center transition-all duration-300 group-hover:bg-[#D4A373]/10 group-hover:border-[#D4A373]/30 group-hover:scale-110">
+                    <div className="mx-auto mb-4 w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#F8EDE3] dark:bg-[#242424] border border-[#D4A373]/15 dark:border-[#3A3030]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#D4A373]/10 group-hover:border-[#D4A373]/30 group-hover:scale-110">
                       <Icon className="w-7 h-7 md:w-8 md:h-8 text-[#D4A373]" strokeWidth={1.5} />
                     </div>
 
                     {/* Service name */}
-                    <h3 className="font-[family-name:var(--font-playfair)] text-base md:text-lg font-semibold text-[#2D2D2D] mb-2 leading-snug">
+                    <h3 className="font-[family-name:var(--font-playfair)] text-base md:text-lg font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] mb-2 leading-snug">
                       {service.name}
                     </h3>
 
                     {/* Description */}
-                    <p className="font-[family-name:var(--font-poppins)] text-xs md:text-sm text-[#888888] leading-relaxed">
+                    <p className="font-[family-name:var(--font-poppins)] text-xs md:text-sm text-[#888888] dark:text-[#A09090] leading-relaxed">
                       {service.description}
                     </p>
 
@@ -267,7 +267,7 @@ export default function Services() {
           animate={isInView ? 'visible' : 'hidden'}
           className="text-center mt-16"
         >
-          <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-sm md:text-base mb-6">
+          <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-sm md:text-base mb-6">
             Can&apos;t find what you&apos;re looking for? We offer custom packages tailored to your needs.
           </p>
           <a href="#contact">

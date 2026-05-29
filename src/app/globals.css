@@ -223,3 +223,139 @@ input[type="number"]::-webkit-outer-spin-button {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ========================================
+   Dark Mode
+   ======================================== */
+
+.dark {
+  --background: #0F0F0F;
+  --foreground: #E8E0D8;
+  --card: #1A1A1A;
+  --card-foreground: #F0E8E0;
+  --popover: #1A1A1A;
+  --popover-foreground: #F0E8E0;
+  --primary: #D4A373;
+  --primary-foreground: #0F0F0F;
+  --secondary: #242424;
+  --secondary-foreground: #F0E8E0;
+  --muted: #2A2222;
+  --muted-foreground: #A09090;
+  --accent: #D4A373;
+  --accent-foreground: #0F0F0F;
+  --destructive: #E74C3C;
+  --border: #3A3030;
+  --input: #3A3030;
+  --ring: #D4A373;
+  --chart-1: #D4A373;
+  --chart-2: #A09090;
+  --chart-3: #2A2222;
+  --chart-4: #F0E8E0;
+  --chart-5: #E8E0D8;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #F0E8E0;
+  --sidebar-primary: #D4A373;
+  --sidebar-primary-foreground: #0F0F0F;
+  --sidebar-accent: #242424;
+  --sidebar-accent-foreground: #F0E8E0;
+  --sidebar-border: #3A3030;
+  --sidebar-ring: #D4A373;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #D4A373;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #c4935f;
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  background-color: #D4A373;
+  color: #0F0F0F;
+}
+
+/* Dark mode glassmorphism */
+.dark .glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-dark {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Dark mode gradient text */
+.dark .gradient-text {
+  background: linear-gradient(135deg, #D4A373 0%, #F0E8E0 50%, #D4A373 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode shimmer */
+.dark .shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 163, 115, 0.15) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Dark mode pulse glow */
+.dark .pulse-glow {
+  animation: dark-pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes dark-pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 163, 115, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(212, 163, 115, 0.45); }
+}
+
+/* Dark mode border gradient */
+.dark .border-gradient {
+  border-image: linear-gradient(135deg, #D4A373, #3A3030, #D4A373) 1;
+}
+
+/* Dark mode section divider */
+.dark .section-divider {
+  background: linear-gradient(90deg, transparent, rgba(212, 163, 115, 0.6), transparent);
+  height: 1px;
+}
+
+/* Dark mode focus styles */
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  outline: none;
+  border-color: #D4A373;
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.15);
+}
+
+/* Dark mode typewriter cursor */
+.dark .typewriter-cursor {
+  background-color: #D4A373;
+}
+
+/* Dark mode hero gradient underline */
+.dark .hero-gradient-underline {
+  background: linear-gradient(90deg, #D4A373, #E8E0D8, #D4A373, #E8E0D8, #D4A373);
+  background-size: 300% 100%;
+  animation: gradient-slide 4s ease infinite;
+}
+
+/* Dark mode body base */
+.dark body {
+  background-color: #0F0F0F;
+  color: #E8E0D8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

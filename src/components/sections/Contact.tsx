@@ -97,7 +97,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-20 md:py-28 bg-white overflow-hidden">
+    <section id="contact" className="relative py-20 md:py-28 bg-white dark:bg-[#0F0F0F] overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#F9D5D3]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F8EDE3]/30 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
@@ -114,10 +114,10 @@ export default function Contact() {
           <span className="inline-block font-[family-name:var(--font-cormorant)] text-[#D4A373] text-lg md:text-xl tracking-[0.2em] uppercase mb-3">
             Contact
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] mb-4">
             Get In Touch
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base md:text-lg max-w-md mx-auto">
+          <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base md:text-lg max-w-md mx-auto">
             We&apos;d love to hear from you
           </p>
           <div className="section-divider w-24 mx-auto mt-6" />
@@ -140,7 +140,7 @@ export default function Contact() {
                 href={item.href}
                 target={item.label === 'WhatsApp' || item.label === 'Instagram' || item.label === 'Address' ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                className="group flex items-start gap-4 p-5 rounded-2xl border border-[#F0E6DC] bg-white hover:bg-[#F8EDE3]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#D4A373]/10 hover:-translate-y-0.5"
+                className="group flex items-start gap-4 p-5 rounded-2xl border border-[#F0E6DC] dark:border-[#3A3030] bg-white dark:bg-[#1A1A1A] hover:bg-[#F8EDE3]/30 dark:hover:bg-[#242424]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#D4A373]/10 hover:-translate-y-0.5"
               >
                 <div
                   className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300"
@@ -155,7 +155,7 @@ export default function Contact() {
                   <p className="font-[family-name:var(--font-poppins)] text-xs font-semibold tracking-wider uppercase text-[#D4A373] mb-1">
                     {item.label}
                   </p>
-                  <p className="font-[family-name:var(--font-poppins)] text-[#2D2D2D] text-sm md:text-base leading-relaxed group-hover:text-[#D4A373] transition-colors duration-300">
+                  <p className="font-[family-name:var(--font-poppins)] text-[#2D2D2D] dark:text-[#F0E8E0] text-sm md:text-base leading-relaxed group-hover:text-[#D4A373] transition-colors duration-300">
                     {item.value}
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function Contact() {
             {/* Working Hours */}
             <motion.div
               variants={itemVariants}
-              className="flex items-start gap-4 p-5 rounded-2xl border border-[#D4A373]/20 bg-gradient-to-r from-[#F8EDE3]/40 to-[#F9D5D3]/20"
+              className="flex items-start gap-4 p-5 rounded-2xl border border-[#D4A373]/20 bg-gradient-to-r from-[#F8EDE3]/40 dark:from-[#242424]/40 to-[#F9D5D3]/20 dark:to-[#2A2222]/20"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#D4A373]/15 flex items-center justify-center">
                 <Clock className="w-5 h-5 text-[#D4A373]" />
@@ -174,7 +174,7 @@ export default function Contact() {
                 <p className="font-[family-name:var(--font-poppins)] text-xs font-semibold tracking-wider uppercase text-[#D4A373] mb-1">
                   {workingHours.label}
                 </p>
-                <p className="font-[family-name:var(--font-poppins)] text-[#2D2D2D] text-sm md:text-base">
+                <p className="font-[family-name:var(--font-poppins)] text-[#2D2D2D] dark:text-[#F0E8E0] text-sm md:text-base">
                   {workingHours.value}
                 </p>
               </div>
@@ -188,16 +188,16 @@ export default function Contact() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-white border border-[#F0E6DC] shadow-xl shadow-[#D4A373]/5">
+            <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-white dark:bg-[#1A1A1A] border border-[#F0E6DC] dark:border-[#3A3030] shadow-xl shadow-[#D4A373]/5">
               {/* Decorative corner accent */}
               <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-3xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#D4A373]/10 to-transparent" />
               </div>
 
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-semibold text-[#2D2D2D] mb-2">
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] mb-2">
                 Quick Contact
               </h3>
-              <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-sm mb-8">
+              <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-sm mb-8">
                 Send us a message and we&apos;ll get back to you shortly
               </p>
 
@@ -205,7 +205,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] mb-2"
+                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] dark:text-[#F0E8E0] mb-2"
                   >
                     Name <span className="text-[#D4A373]">*</span>
                   </label>
@@ -217,14 +217,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] bg-[#F8EDE3]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
+                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="contact-phone"
-                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] mb-2"
+                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] dark:text-[#F0E8E0] mb-2"
                   >
                     Phone <span className="text-[#D4A373]">*</span>
                   </label>
@@ -236,14 +236,14 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Your phone number"
-                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] bg-[#F8EDE3]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
+                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="contact-message"
-                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] mb-2"
+                    className="block font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] dark:text-[#F0E8E0] mb-2"
                   >
                     Message <span className="text-[#D4A373]">*</span>
                   </label>
@@ -255,7 +255,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your requirements..."
-                    className="font-[family-name:var(--font-poppins)] rounded-xl border-[#F0E6DC] bg-[#F8EDE3]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm resize-none"
+                    className="font-[family-name:var(--font-poppins)] rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm resize-none"
                   />
                 </div>
 

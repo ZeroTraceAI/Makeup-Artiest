@@ -41,7 +41,7 @@ const MAPS_EMBED_URL =
 
 export default function MapSection() {
   return (
-    <section id="location" className="relative w-full bg-white py-20 md:py-28 overflow-hidden">
+    <section id="location" className="relative w-full bg-white dark:bg-[#0F0F0F] py-20 md:py-28 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#F9D5D3] rounded-full blur-3xl opacity-15 -translate-x-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#D4A373] rounded-full blur-3xl opacity-10 translate-x-1/3" />
@@ -64,10 +64,10 @@ export default function MapSection() {
           >
             Location
           </motion.span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-5">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] mb-5">
             Visit Our Studio
           </h2>
-          <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             Come experience luxury beauty services at our studio
           </p>
           <div className="section-divider mt-8 mx-auto w-32" />
@@ -84,7 +84,7 @@ export default function MapSection() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-[#D4A373]/10 border border-[#F0E6DC]">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-[#D4A373]/10 border border-[#F0E6DC] dark:border-[#3A3030]">
                 <iframe
                   src={MAPS_EMBED_URL}
                   width="100%"
@@ -97,7 +97,7 @@ export default function MapSection() {
                   className="w-full h-[400px]"
                 />
                 {/* Subtle overlay gradient at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/30 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/30 dark:from-[#0F0F0F]/30 to-transparent pointer-events-none" />
               </div>
             </motion.div>
 
@@ -109,7 +109,7 @@ export default function MapSection() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="h-full bg-gradient-to-br from-white to-[#F8EDE3]/50 rounded-2xl border border-[#F0E6DC] p-6 md:p-8 shadow-lg flex flex-col justify-between">
+              <div className="h-full bg-gradient-to-br from-white dark:from-[#1A1A1A] to-[#F8EDE3]/50 dark:to-[#242424]/50 rounded-2xl border border-[#F0E6DC] dark:border-[#3A3030] p-6 md:p-8 shadow-lg flex flex-col justify-between">
                 {/* Address Section */}
                 <div>
                   <div className="flex items-start gap-4 mb-6">
@@ -117,10 +117,10 @@ export default function MapSection() {
                       <MapPin className="size-5 text-[#D4A373]" />
                     </div>
                     <div>
-                      <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#2D2D2D] mb-1.5">
+                      <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] mb-1.5">
                         Studio Address
                       </h3>
-                      <p className="font-[family-name:var(--font-poppins)] text-sm text-[#444444]/80 leading-relaxed">
+                      <p className="font-[family-name:var(--font-poppins)] text-sm text-[#444444]/80 dark:text-[#A09090]/80 leading-relaxed">
                         {STUDIO_ADDRESS}
                       </p>
                     </div>
@@ -132,7 +132,7 @@ export default function MapSection() {
                       <Phone className="size-5 text-[#D4A373]" />
                     </div>
                     <div>
-                      <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#2D2D2D] mb-1.5">
+                      <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#2D2D2D] dark:text-[#F0E8E0] mb-1.5">
                         Phone
                       </h3>
                       <a

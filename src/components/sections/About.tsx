@@ -61,7 +61,7 @@ export default function About() {
       className="relative py-20 md:py-28 overflow-hidden"
     >
       {/* Background: White with subtle champagne gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#F8EDE3]/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#F8EDE3]/40 dark:from-[#0F0F0F] dark:via-[#0F0F0F] dark:to-[#1A1A1A]/40" />
 
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 right-0 section-divider" />
@@ -115,7 +115,7 @@ export default function About() {
 
               {/* Floating decorative element */}
               <motion.div
-                className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#F8EDE3] rounded-full flex items-center justify-center shadow-lg border border-[#D4A373]/20"
+                className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#F8EDE3] dark:bg-[#1A1A1A] rounded-full flex items-center justify-center shadow-lg border border-[#D4A373]/20"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
@@ -123,7 +123,7 @@ export default function About() {
                   <span className="block font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#D4A373]">
                     5+
                   </span>
-                  <span className="block text-[10px] font-[family-name:var(--font-poppins)] text-[#444444] uppercase tracking-wider">
+                  <span className="block text-[10px] font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] uppercase tracking-wider">
                     Years
                   </span>
                 </div>
@@ -146,7 +146,7 @@ export default function About() {
             </div>
 
             {/* Main heading */}
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#2D2D2D] leading-tight">
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#2D2D2D] dark:text-[#F0E8E0] leading-tight">
               Meet Madhu
             </h2>
 
@@ -157,19 +157,19 @@ export default function About() {
 
             {/* Description paragraphs */}
             <div className="space-y-4">
-              <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base leading-relaxed">
+              <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base leading-relaxed">
                 With a passion for beauty and an eye for detail, I&apos;ve dedicated my career to
                 helping every client discover their most radiant self. From the delicate artistry
                 of bridal makeup to the bold creativity of party looks, I believe makeup is more
                 than just application &mdash; it&apos;s therapy for the soul.
               </p>
-              <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base leading-relaxed">
+              <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base leading-relaxed">
                 Based in Ahmedabad, I specialize in creating personalized looks that enhance your
                 natural beauty using only premium, skin-friendly products. Whether it&apos;s your
                 wedding day, a festive celebration, or a professional photoshoot, I ensure every
                 stroke of my brush reflects your unique personality.
               </p>
-              <p className="font-[family-name:var(--font-poppins)] text-[#444444] text-base leading-relaxed">
+              <p className="font-[family-name:var(--font-poppins)] text-[#444444] dark:text-[#A09090] text-base leading-relaxed">
                 Serving clients across Gujarat, my mission is simple &mdash; to make you feel
                 confident, beautiful, and truly yourself. Because when you look good, you feel
                 unstoppable.
@@ -187,12 +187,12 @@ export default function About() {
                 <motion.div
                   key={item.label}
                   variants={highlightVariants}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-[#F8EDE3]/50 border border-[#D4A373]/10"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-[#F8EDE3]/50 dark:bg-[#1A1A1A]/50 border border-[#D4A373]/10 dark:border-[#3A3030]/30"
                 >
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D4A373]/10 flex items-center justify-center">
                     <Check className="w-4 h-4 text-[#D4A373]" />
                   </div>
-                  <span className="font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D]">
+                  <span className="font-[family-name:var(--font-poppins)] text-sm font-medium text-[#2D2D2D] dark:text-[#E8E0D8]">
                     {item.label}
                   </span>
                 </motion.div>
