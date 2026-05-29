@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useMemo, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import { ArrowRight, Calendar, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -81,6 +81,18 @@ const itemVariants = {
   },
 };
 
+/* ------------------------------------------------------------------ */
+/*  Rotating phrases for typewriter effect                             */
+/* ------------------------------------------------------------------ */
+const ROTATING_PHRASES = [
+  'Professional Bridal Makeup Artist in Ahmedabad',
+  'Creating Stunning Looks for Every Occasion',
+  'Your Trusted Beauty & Makeup Expert',
+  'Premium Airbrush & HD Makeup Specialist',
+] as const;
+
+const PHRASE_DURATION = 2500; // ms each phrase stays visible
+
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -88,6 +100,16 @@ export default function Hero() {
     offset: ['start start', 'end start'],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+
+  /* Rotating typewriter text state */
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhraseIndex((prev) => (prev + 1) % ROTATING_PHRASES.length);
+    }, PHRASE_DURATION);
+    return () => clearInterval(interval);
+  }, []);
 
   /* Generate deterministic particles via useMemo */
   const particles = useMemo<ParticleProps[]>(
@@ -105,7 +127,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      id="hero"
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* ---------- Background gradient ---------- */}
@@ -167,16 +189,31 @@ export default function Hero() {
         >
           <span className="gradient-text">Transforming Beauty</span>
           <br />
-          <span className="text-[#2D2D2D]">Into Confidence</span>
+          <span className="relative inline-block text-[#2D2D2D]">
+            Into Confidence
+            <span className="hero-gradient-underline absolute left-0 -bottom-2 h-[3px] w-full rounded-full" />
+          </span>
         </motion.h1>
 
-        {/* Subheadline */}
-        <motion.p
+        {/* Rotating typewriter subheadline */}
+        <motion.div
           variants={itemVariants}
-          className="mt-6 text-base sm:text-lg md:text-xl text-[#444444]/80 max-w-2xl mx-auto font-[family-name:var(--font-poppins)] font-light leading-relaxed"
+          className="mt-6 h-8 sm:h-9 md:h-10 flex items-center justify-center overflow-hidden"
         >
-          Professional Bridal, Party &amp; Occasion Makeup Artist in Ahmedabad
-        </motion.p>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={phraseIndex}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="text-base sm:text-lg md:text-xl text-[#444444]/80 max-w-2xl mx-auto font-[family-name:var(--font-poppins)] font-light leading-relaxed whitespace-nowrap"
+            >
+              {ROTATING_PHRASES[phraseIndex]}
+              <span className="typewriter-cursor ml-0.5 inline-block align-middle" />
+            </motion.p>
+          </AnimatePresence>
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div

@@ -196,3 +196,30 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Typewriter blinking cursor */
+.typewriter-cursor {
+  width: 2px;
+  height: 1.1em;
+  background-color: #D4A373;
+  border-radius: 1px;
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Animated gradient underline for hero headline */
+.hero-gradient-underline {
+  background: linear-gradient(90deg, #D4A373, #F9D5D3, #D4A373, #F9D5D3, #D4A373);
+  background-size: 300% 100%;
+  animation: gradient-slide 4s ease infinite;
+}
+
+@keyframes gradient-slide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

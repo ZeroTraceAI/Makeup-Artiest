@@ -2,11 +2,14 @@
 
 import Navbar from '@/components/shared/Navbar'
 import FloatingWhatsApp from '@/components/shared/FloatingWhatsApp'
+import ScrollToTop from '@/components/shared/ScrollToTop'
+import ReadingProgressBar from '@/components/shared/ReadingProgressBar'
 import Hero from '@/components/sections/Hero'
 import Trust from '@/components/sections/Trust'
 import About from '@/components/sections/About'
 import Services from '@/components/sections/Services'
 import Portfolio from '@/components/sections/Portfolio'
+import BeforeAfter from '@/components/sections/BeforeAfter'
 import WhyChooseUs from '@/components/sections/WhyChooseUs'
 import Reviews from '@/components/sections/Reviews'
 import Booking from '@/components/sections/Booking'
@@ -27,6 +30,7 @@ export default function Home() {
         <About />
         <Services />
         <Portfolio />
+        <BeforeAfter />
         <WhyChooseUs />
         <Reviews />
         <Booking />
@@ -38,6 +42,8 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
+      <ReadingProgressBar />
     </div>
   )
 }

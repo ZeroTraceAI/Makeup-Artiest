@@ -16,6 +16,10 @@ import {
   Palette,
   Hand,
   ArrowRight,
+  GlassWater,
+  Aperture,
+  Flower2,
+  Stars,
 } from 'lucide-react';
 
 interface Service {
@@ -48,7 +52,7 @@ const services: Service[] = [
   {
     name: 'Reception Makeup',
     description: 'Glamorous looks for your reception',
-    icon: PartyPopper,
+    icon: GlassWater,
   },
   {
     name: 'Party Makeup',
@@ -78,7 +82,7 @@ const services: Service[] = [
   {
     name: 'Photoshoots',
     description: 'Camera-ready perfection for every shot',
-    icon: Camera,
+    icon: Aperture,
   },
   {
     name: 'Hair Styling',
@@ -88,7 +92,7 @@ const services: Service[] = [
   {
     name: 'Bridal Hairstyling',
     description: 'Regal bridal hair masterpieces',
-    icon: Crown,
+    icon: Flower2,
   },
   {
     name: 'Saree Draping',
@@ -98,7 +102,7 @@ const services: Service[] = [
   {
     name: 'Pre Bridal Packages',
     description: 'Complete pre-wedding beauty care',
-    icon: Sparkles,
+    icon: Stars,
   },
   {
     name: 'Nail Services',
