@@ -217,7 +217,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
+                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] dark:placeholder:text-[#666] text-sm"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Your phone number"
-                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm"
+                    className="font-[family-name:var(--font-poppins)] h-12 rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] dark:placeholder:text-[#666] text-sm"
                   />
                 </div>
 
@@ -255,7 +255,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your requirements..."
-                    className="font-[family-name:var(--font-poppins)] rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] text-sm resize-none"
+                    className="font-[family-name:var(--font-poppins)] rounded-xl border-[#F0E6DC] dark:border-[#3A3030] bg-[#F8EDE3]/20 dark:bg-[#242424]/20 focus:border-[#D4A373] focus:ring-[#D4A373]/20 placeholder:text-[#999] dark:placeholder:text-[#666] text-sm resize-none"
                   />
                 </div>
 

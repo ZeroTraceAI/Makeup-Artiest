@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useCallback, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -9,6 +10,10 @@ interface BeforeAfterSliderProps {
   beforeGradient: string
   /** CSS gradient for the "after" side (vibrant/luxury) */
   afterGradient: string
+  /** URL for the before image */
+  beforeImage?: string
+  /** URL for the after image */
+  afterImage?: string
   /** Title displayed below the slider */
   title?: string
   /** Subtitle displayed below the title */
@@ -22,6 +27,8 @@ interface BeforeAfterSliderProps {
 export default function BeforeAfterSlider({
   beforeGradient,
   afterGradient,
+  beforeImage,
+  afterImage,
   title,
   subtitle,
   aspectClass = 'aspect-[4/5]',
@@ -135,6 +142,15 @@ export default function BeforeAfterSlider({
           className="absolute inset-0"
           style={{ background: beforeGradient }}
         >
+          {beforeImage && (
+            <Image
+              src={beforeImage}
+              alt="Before"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          )}
           {/* Decorative pattern overlay for "before" */}
           <div className="absolute inset-0 opacity-10"
             style={{
@@ -153,6 +169,15 @@ export default function BeforeAfterSlider({
             transition: isDragging ? 'none' : 'clip-path 0.05s ease-out',
           }}
         >
+          {afterImage && (
+            <Image
+              src={afterImage}
+              alt="After"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          )}
           {/* Decorative shimmer overlay for "after" */}
           <div className="absolute inset-0 shimmer opacity-30" />
           {/* Subtle sparkle pattern */}
@@ -246,11 +271,11 @@ export default function BeforeAfterSlider({
       {/* Title & Subtitle */}
       {title && (
         <div className="mt-4 text-center sm:mt-5">
-          <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-[#2D2D2D] sm:text-xl">
+          <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-[#2D2D2D] dark:text-[#F0E8E0] sm:text-xl">
             {title}
           </h3>
           {subtitle && (
-            <p className="font-[family-name:var(--font-poppins)] mt-1 text-xs font-light text-[#888888] sm:text-sm">
+            <p className="font-[family-name:var(--font-poppins)] mt-1 text-xs font-light text-[#888888] dark:text-[#A09090] sm:text-sm">
               {subtitle}
             </p>
           )}

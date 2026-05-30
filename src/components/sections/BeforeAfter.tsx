@@ -9,6 +9,8 @@ const transformations = [
     id: 1,
     title: 'Bridal Transformation',
     subtitle: 'From everyday beauty to blushing bride',
+    beforeImage: '/images/before-bridal.png',
+    afterImage: '/images/after-bridal.png',
     beforeGradient:
       'linear-gradient(135deg, #b0a090 0%, #c4b8a8 30%, #d5ccc0 60%, #c8bdb0 100%)',
     afterGradient:
@@ -18,6 +20,8 @@ const transformations = [
     id: 2,
     title: 'Party Glam Makeover',
     subtitle: 'Turn heads at every celebration',
+    beforeImage: '/images/before-party.png',
+    afterImage: '/images/after-party.png',
     beforeGradient:
       'linear-gradient(135deg, #9e9e9e 0%, #b8b0a8 30%, #a8a098 60%, #b0a8a0 100%)',
     afterGradient:
@@ -27,6 +31,8 @@ const transformations = [
     id: 3,
     title: 'Reception Ready Look',
     subtitle: 'Elegant sophistication for your special evening',
+    beforeImage: '/images/before-reception.png',
+    afterImage: '/images/after-reception.png',
     beforeGradient:
       'linear-gradient(135deg, #a89888 0%, #c0b5a5 35%, #b5a898 65%, #a89888 100%)',
     afterGradient:
@@ -75,6 +81,8 @@ export default function BeforeAfter() {
               <BeforeAfterSlider
                 beforeGradient={item.beforeGradient}
                 afterGradient={item.afterGradient}
+                beforeImage={item.beforeImage}
+                afterImage={item.afterImage}
                 title={item.title}
                 subtitle={item.subtitle}
               />

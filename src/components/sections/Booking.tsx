@@ -355,7 +355,7 @@ Please confirm availability.`;
                   >
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
-                  <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)]">
+                  <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)] dark:bg-[#1A1A1A] dark:border-[#3A3030]">
                     {services.map((service) => (
                       <SelectItem key={service} value={service}>
                         {service}
@@ -387,7 +387,7 @@ Please confirm availability.`;
                   >
                     <SelectValue placeholder="Select event type" />
                   </SelectTrigger>
-                  <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)]">
+                  <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)] dark:bg-[#1A1A1A] dark:border-[#3A3030]">
                     {eventTypes.map((type) => (
                       <SelectItem key={type} value={type}>
                         {type}
@@ -446,7 +446,7 @@ Please confirm availability.`;
                     >
                       <SelectValue placeholder="Select preferred time" />
                     </SelectTrigger>
-                    <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)]">
+                    <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)] dark:bg-[#1A1A1A] dark:border-[#3A3030]">
                       {timeSlots.map((slot) => (
                         <SelectItem key={slot} value={slot}>
                           {slot}
@@ -481,7 +481,7 @@ Please confirm availability.`;
                     >
                       <SelectValue placeholder="Select location" />
                     </SelectTrigger>
-                    <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)]">
+                    <SelectContent className="rounded-xl font-[family-name:var(--font-poppins)] dark:bg-[#1A1A1A] dark:border-[#3A3030]">
                       {locations.map((loc) => (
                         <SelectItem key={loc} value={loc}>
                           {loc}

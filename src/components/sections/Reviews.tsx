@@ -104,7 +104,7 @@ function StarRating({ rating }: { rating: number }) {
           className={`size-4 ${
             i < rating
               ? 'fill-[#D4A373] text-[#D4A373]'
-              : 'fill-gray-200 text-gray-200'
+              : 'fill-gray-200 dark:fill-gray-700 text-gray-200 dark:text-gray-700'
           }`}
         />
       ))}
