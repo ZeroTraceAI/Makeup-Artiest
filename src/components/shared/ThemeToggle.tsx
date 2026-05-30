@@ -60,7 +60,7 @@ export default function ThemeToggle() {
               initial={{ scale: 0, rotate: -90, opacity: 0 }}
               animate={{ scale: 1, rotate: 0, opacity: 1 }}
               exit={{ scale: 0, rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.25, ease: 'easeInOut' }}
+              transition={{ duration: 0.25, ease: 'easeInOut' as const }}
               className="absolute inset-0 flex items-center justify-center"
             >
               <CurrentIconComponent className="size-[18px] text-[#D4A373] transition-colors group-hover:text-[#D4A373]" />
@@ -98,7 +98,7 @@ export default function ThemeToggle() {
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' as const }}
                 >
                   <Check className="size-3.5 text-[#D4A373]" />
                 </motion.div>

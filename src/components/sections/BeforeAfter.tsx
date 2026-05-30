@@ -75,7 +75,7 @@ export default function BeforeAfter() {
               transition={{
                 duration: 0.5,
                 delay: index * 0.15,
-                ease: 'easeOut',
+                ease: 'easeOut' as const,
               }}
             >
               <BeforeAfterSlider

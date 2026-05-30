@@ -36,7 +36,7 @@ function Particle({ x, y, size, duration, delay }: ParticleProps) {
         duration,
         delay,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       }}
     />
   );
@@ -77,7 +77,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
 };
 
@@ -206,7 +206,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] as const }}
               className="text-base sm:text-lg md:text-xl text-[#444444]/80 dark:text-[#A09090]/80 max-w-2xl mx-auto font-[family-name:var(--font-poppins)] font-light leading-relaxed whitespace-nowrap"
             >
               {ROTATING_PHRASES[phraseIndex]}
@@ -266,7 +266,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' as const }}
           className="w-6 h-10 rounded-full border-2 border-[#D4A373]/40 flex items-start justify-center pt-2"
         >
           <motion.div className="w-1.5 h-1.5 rounded-full bg-[#D4A373]/60" />

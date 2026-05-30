@@ -74,7 +74,7 @@ export default function FloatingWhatsApp() {
                 transition={{
                   duration: 2.5,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: 'easeInOut' as const,
                 }}
               />
 
@@ -93,7 +93,7 @@ export default function FloatingWhatsApp() {
                     : {
                         duration: 1.2,
                         delay: 1.3,
-                        ease: 'easeOut',
+                        ease: 'easeOut' as const,
                       }
                 }
                 onAnimationComplete={() => setBounceComplete(true)}

@@ -9,7 +9,7 @@ const headerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: 'easeOut' as const },
   },
 };
 
@@ -18,7 +18,7 @@ const mapVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, ease: 'easeOut' },
+    transition: { duration: 0.8, ease: 'easeOut' as const },
   },
 };
 
@@ -27,7 +27,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: 'easeOut', delay: 0.3 },
+    transition: { duration: 0.6, ease: 'easeOut' as const, delay: 0.3 },
   },
 };
 

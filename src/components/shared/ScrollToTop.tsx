@@ -60,7 +60,7 @@ export default function ScrollToTop() {
             transition={{
               duration: 3,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: 'easeInOut' as const,
             }}
           />
 
@@ -74,7 +74,7 @@ export default function ScrollToTop() {
             transition={{
               duration: 3,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: 'easeInOut' as const,
               delay: 0.5,
             }}
           />

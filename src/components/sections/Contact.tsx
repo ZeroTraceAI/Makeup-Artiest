@@ -92,7 +92,7 @@ export default function Contact() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
+      transition: { duration: 0.5, ease: 'easeOut' as const },
     },
   }
 
@@ -267,7 +267,7 @@ export default function Contact() {
                   {isSubmitting ? (
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
+                      transition={{ repeat: Infinity, duration: 1, ease: 'linear' as const }}
                       className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
                     />
                   ) : isSubmitted ? (

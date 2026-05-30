@@ -24,7 +24,7 @@ function Counter({ target, suffix = '', prefix = '', decimals = 0, duration = 2,
 
     const controls = animate(0, target, {
       duration,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,
       onUpdate: (value) => setCount(Number(value.toFixed(decimals))),
     });
 
@@ -50,9 +50,10 @@ interface StatCardProps {
   label: string;
   index: number;
   inView: boolean;
+  decimals?: number;
 }
 
-function StatCard({ icon, value, suffix, label, index, inView }: StatCardProps) {
+function StatCard({ icon, value, suffix, label, index, inView, decimals = 0 }: StatCardProps) {
   return (
     <motion.div
       className="group relative glass dark:bg-[#0F0F0F]/40 dark:border-[#3A3030]/30 rounded-2xl p-6 sm:p-8 text-center hover:shadow-lg hover:shadow-[#D4A373]/10 transition-all duration-500 cursor-default"
@@ -61,7 +62,7 @@ function StatCard({ icon, value, suffix, label, index, inView }: StatCardProps) 
       transition={{
         duration: 0.7,
         delay: index * 0.15,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
       }}
       whileHover={{ y: -4, scale: 1.02 }}
     >
@@ -75,7 +76,7 @@ function StatCard({ icon, value, suffix, label, index, inView }: StatCardProps) 
 
       {/* Number */}
       <div className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#2D2D2D] dark:text-[#F0E8E0]">
-        <Counter target={value} suffix={suffix} inView={inView} />
+        <Counter target={value} suffix={suffix} inView={inView} decimals={decimals} />
       </div>
 
       {/* Label */}
@@ -148,7 +149,7 @@ export default function Trust() {
           className="text-center mb-14"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.7, ease: 'easeOut' as const }}
         >
           <span className="inline-block text-sm font-[family-name:var(--font-cormorant)] text-[#D4A373] tracking-widest uppercase mb-3">
             Why Choose Us
@@ -182,7 +183,7 @@ export default function Trust() {
           className="mt-14 mx-auto max-w-xs section-divider"
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
-          transition={{ duration: 1, delay: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.8, ease: 'easeOut' as const }}
         />
       </div>
     </section>
